@@ -1,6 +1,11 @@
 Processing scripts for eye-tracking data.
 # Overview
-This folder contains code for processing raw eye-tracking data for the **Dancing Ladies** and **Calibration Verification** tasks, and creating time series for MFDFA analysis. 
+This folder contains code for processing raw eye-tracking data for the **Dancing Ladies** and **Calibration Verification** tasks, and creating time series for MFDFA analysis.  
+
+Broadly, this involves extracting the (x,y) coordinates of where the infant is looking, and creating a 1-dimensional time series of the amplitude of the infant's gaze.  
+<img src="https://github.com/rrobinn/fractal-eye-analyses/blob/master/images/xy_coord.png" alt="(x,y) coordinates" width="260" height="150">
+<img src="https://github.com/rrobinn/fractal-eye-analyses/blob/master/images/amplitude.png" alt="Amplitude" width="260" height="150">
+
 `process_individual.m` contains a "master script" that calls each function needed to create the time series for DFA.  Broadly, the processing steps include:  
 1. <b>Flagging blinks</b> (`blinkDetection.m`)  
 2. <b>Separating continuous stream of data into trials </b> (`parse_et_totrials.m`)  
